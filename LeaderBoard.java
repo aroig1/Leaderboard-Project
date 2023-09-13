@@ -5,7 +5,7 @@ public class LeaderBoard {
 
     private Contestant board[];
 
-    public LeaderBoard(int m) {
+    public LeaderBoard(int m) throws Exception {
         this.board = new Contestant[m];
 
         File file = new File("names.txt");
@@ -16,7 +16,7 @@ public class LeaderBoard {
 
         for (int i = 0; i < m; ++i) {
             input = scnr.nextLine();
-            name = input.substring(0, input.length() - 1);
+            name = input.substring(0, input.length() - 2);
             score = Integer.parseInt(input.substring(input.length() - 1, input.length()));
 
             Contestant temp = new Contestant(name, score);
@@ -31,7 +31,11 @@ public class LeaderBoard {
         String tempName;
 
         for (int i = 0; i < board.length; ++i) {
-            if ((c.compareTo(board[i]) > 0) || board[i] == null) {
+            if (board[i] == null) {
+                board[i] = c;
+                break;
+            }
+            else if (c.compareTo(board[i]) > 0) {
                 tempScore = board[i].getScore();
                 tempName = board[i].getName();
 
