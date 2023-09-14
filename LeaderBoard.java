@@ -16,12 +16,15 @@ public class LeaderBoard {
 
         for (int i = 0; i < m; ++i) {
             input = scnr.nextLine();
-            name = input.substring(0, input.length() - 2);
-            score = Integer.parseInt(input.substring(input.length() - 1, input.length()));
+            String[] str = input.split(",");
+            name = str[0];
+            score = Integer.parseInt(str[1]);
 
             Contestant temp = new Contestant(name, score);
             this.add(temp);
         }
+
+        scnr.close();
 
     }
 
@@ -35,7 +38,7 @@ public class LeaderBoard {
                 board[i] = c;
                 break;
             }
-            else if (c.compareTo(board[i]) > 0) {
+            else if (c.compareTo(board[i]) < 0) {
                 tempScore = board[i].getScore();
                 tempName = board[i].getName();
 
