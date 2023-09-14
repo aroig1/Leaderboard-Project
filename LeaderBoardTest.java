@@ -8,7 +8,7 @@ public class LeaderBoardTest {
         LeaderBoard test = new LeaderBoard(50);
 
         try {
-            File file = new File("names2.txt");
+            File file = new File("names.txt");
             Scanner scnr = new Scanner(file);
             String input;
             String name;
