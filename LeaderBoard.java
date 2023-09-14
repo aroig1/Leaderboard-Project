@@ -56,9 +56,14 @@ public class LeaderBoard {
 
         // Prints Board (not sure if this function is supposed to print or not)
         for (int i = 0; i < board.length; ++i) {
-            System.out.println(board[i].toString());
+            if (board[i] == null) {
+                System.out.println("" + (i + 1) + ". _______________");
+            }
+            else {
+                System.out.println("" + (i + 1) + ". " + board[i].toString());
+            }
         }
-        
+
         return this.board;   
     }
 }
