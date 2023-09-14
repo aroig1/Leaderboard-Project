@@ -17,7 +17,7 @@ public class Contestant {
         return this.score;
     }
 
-    public int compareTo(Contestant o) { // Check if could pass Contestant instead of Object
+    public int compareTo(Contestant o) {
 
         if (this.score != o.getScore()) {
             return o.getScore() - this.score;

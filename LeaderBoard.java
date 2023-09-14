@@ -1,33 +1,10 @@
-import java.util.Scanner;
-import java.io.File;
-
 public class LeaderBoard {
 
     private Contestant board[];
 
-    // n is the number of input people/scores, m is the number of people put on the leaderboard
-    public LeaderBoard(int n, int m) throws Exception {
+    // m is the number of people put on the leaderboard
+    public LeaderBoard(int m) throws Exception {
         this.board = new Contestant[m];
-
-        File file = new File("names.txt");
-        Scanner scnr = new Scanner(file);
-        String input;
-        String name;
-        int score;
-
-        // Reads in n values and calls to add() function to add them to leaderboard
-        for (int i = 0; i < n; ++i) {
-            input = scnr.nextLine();
-            String[] str = input.split(",");
-            name = str[0];
-            score = Integer.parseInt(str[1]);
-
-            Contestant temp = new Contestant(name, score);
-            this.add(temp);
-        }
-
-        scnr.close();
-
     }
 
     public void add(Contestant c) {
@@ -53,17 +30,6 @@ public class LeaderBoard {
     }
 
     public Contestant[] finalBoard() {
-
-        // Prints Board (not sure if this function is supposed to print or not)
-        for (int i = 0; i < board.length; ++i) {
-            if (board[i] == null) {
-                System.out.println("" + (i + 1) + ". _______________");
-            }
-            else {
-                System.out.println("" + (i + 1) + ". " + board[i].toString());
-            }
-        }
-
         return this.board;   
     }
 }

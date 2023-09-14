@@ -682,7 +682,7 @@ Alyce Levinson,7
 Amie Wolfgang,8
 Angela van Goethe,8
 Annis Miguel,4
-Carol Cervantes9
+Carol Cervantes,9
 Carra Savedra,5
 Clarence Calvino,7
 Clarinda Calvin,10
@@ -855,7 +855,7 @@ Delphine Cassatt,7
 Dosha Rousseau,2
 Edgar Rothko,5
 Elaine David,2
-Elisa Ludwig7
+Elisa Ludwig,7
 Ellar Beethoven,10
 Elmire Bach,9
 Elvina Sebastian,10
